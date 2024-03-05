@@ -1,0 +1,577 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <title>Cleaques home</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg py-4 px-5" style="background-color: #00192b;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="sell.html">Sell</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary sign-up px-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Sign Up
+            </button>
+            
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title fs-3" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                      <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Enter your Email and new Password for sign up, or <span data-toggle="modal" data-target="#staticBackdrop" data-dismiss="modal">Already have account?</span></p>
+                    <div class="togglebutton mb-4 act ">
+                      <button  onclick="vendorShow()"><span class="icons act" id="vendor"><i class="bi bi-person-fill-check"></i><br>VENDOR</span></button>
+                      <button onclick="personalShow()"><span class="icons" id="personal" ><i class="bi bi-person-fill"></i><br>PERSONAL</span></button>
+                    </div>
+                    <!--Vendor Div-->
+                    <div id="vendor-display">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Company name*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Email address*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Confirm Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Paypal Account*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Street Address*</label>
+                      </div>
+                      <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">Country</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>--Country--</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">State</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">City</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputZip" class="form-label text-secondary">Zip</label>
+                          <input type="text" class="form-control text-secondary" id="inputZip">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Registration Number*</label>
+                        </div>
+                        <div class="upload col-12">
+                          <label for="formFileLg" class="form-label text-secondary">Upload business registration certificate</label>
+                          <input class="form-control text-secondary form-control text-secondary-lg" id="formFileSm" type="file">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Referral code</label>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn px-5" style="background-color: orangered; color: white;">Sign up</button>
+                        </div>
+                      </form>
+                      <p>By clicking "Sign Up", you agree to Cleaques <span class="text-primary">Terms and Condition</span> of Use and <span class="text-primary">Privacy Policy</span>. You consent to receive phone calls and SMS messages from Cleaques to provide updates on your order and/or for marketing purposes. You will receive up to 5 promotional messages a month. Reply with "STOP" to cancel at any time. Message and data rates may apply.</p>
+                    </div>
+      
+                    <!--Personal Div-->
+                    <div id="personal-display">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Name*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Email address*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Confirm Password*</label>
+                      </div>
+                      <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">Country</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>--Country--</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">State</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">City</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputZip" class="form-label text-secondary">Zip</label>
+                          <input type="text" class="form-control text-secondary" id="inputZip">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="date" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Age(must be 18+)*</label>
+                        </div>
+                        <label class="text-secondary">Gender</label>
+                        <div class="form-check col-6">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Male
+                          </label>
+                        </div>
+                        <div class="form-check col-6">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Female
+                          </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Referral code</label>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn px-5" style="background-color: orangered; color: white;">Sign up</button>
+                        </div>
+                      </form>
+                      <p>By clicking "Sign Up", you agree to Cleaques <span class="text-primary">Terms and Condition</span> of Use and <span class="text-primary">Privacy Policy</span>. You consent to receive phone calls and SMS messages from Cleaques to provide updates on your order and/or for marketing purposes. You will receive up to 5 promotional messages a month. Reply with "STOP" to cancel at any time. Message and data rates may apply.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </li>
+          <li>
+            <!-- Button trigger modal -->
+            <!--Log in button-->
+            <button type="button" class="btn text-light px-5 ms-4 log-in" style="background-color: orangered;" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+            <!-- Modal -->
+            <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Don’t have an account?<button data-toggle="modal" data-target="#exampleModal" data-dismiss="modal" class="btn text-primary" >Sign up now!</button></p>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                      <label for="floatingInput">Email address*</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                      <label for="floatingPassword">Password*</label>
+                    </div>
+                    <a href="">forgot password?</a>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="Dashboard.html" class="btn btn-primary text-light">Login</a></button>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>  
+  </nav>
+  <div class="div1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 div">
+          <p class="text-light fw-medium">Connect with your diaspora <br>on Cleaques marketplace</p>
+          <p class="text-light">We give African expats access to quality and trusted cultural goods, services and events while offering opportunities to African creators and producers to join the global market</p>
+          <select class="select col-3 me-2 mb-5">
+            <option value="selected">Find service</option>
+            <option>Clothing</option>
+            <option>New in town</option>
+            <option>Barber</option>
+            <option>Food</option>
+            <option>Events planner</option>
+            <option>Vacation</option>
+            <option>Photography</option>
+            <option>Handy Man</option>
+          </select>
+          <input type="text" placeholder="Location" class="form col-6 mb-5">
+          <span class=" text-light fw-bold">Secure<span class="text-primary">.</span>Reliable<span class="text-primary">.</span>Transparent<span class="text-primary">.</span></span>
+        </div>
+        <div class="col-12 col-md-6 div"></div>
+      </div>
+    </div>
+  </div>
+  <div class="div2 text-center">
+    <div class="container">
+      <p class="fs-2 fw-bold text-center my-5" style="color: orangered;">Buy directly from African artisans, support African <br>expats in your area and more</p>
+    </div>
+    <div class="container">
+      <div  class="row">
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-shop-window fs-4"></i><div>Shop Product</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-headset fs-4"></i><div>Find Services</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-cash-stack fs-4"></i><div>Send Money</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-credit-card-2-back fs-4"></i><div>Pay Bills</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-heart-pulse fs-4"></i><div>Donate</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-gift fs-4"></i><div>Earn Reward</div></button>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary px-5 py-2 fs-5 mb-5" data-toggle="modal" data-target="#exampleModal">Create a free account</button>
+  </div>
+  <div class="div3 text-center text-light">
+    <p class="fs-1">The ONLY platform to specifically target <br>diaspora communities</p>
+    <p class="fs-5">Discover talented artisans and creators from back home and support small business owners in your neighborhood! <br> At Cleaques, we connect African producers and service providers to African expats in the US and Canada and <br>empower cultural connections and financial transactions between the members of the African diaspora.</p>
+    <button class="btn py-2 px-4 my-5" style="background-color: #00192b; color: white;"><a href="about.html">About us</a></button>
+  </div>
+  <div class="div4 my-5 animate__animated animate__fadeInTopLeft">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold mb-4" style="color: rgb(255, 115, 0);">Shop authentic African goods</p>
+          <p class="fs-1 fw-bold mb-4">Find your favorite products and discover new ones</p>
+          <p class="text-secondary fs-5 mb-4">Missing your favorite food, textiles, or decor? Find it on Cleaques! We pride ourselves on providing seamless access to cultural products direct from African producers on a reliable, transparent platform.</p>
+          <button class="btn fw-bold" style="background-color: rgb(255, 115, 0); color: white;"> Shop now</button>
+        </div>
+        <div class="col-12 col-md-6">
+          <span class="img-display"><img src="./images/Home_images/update1.png" class="img-fluid"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div5 my-5">
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <span class="img-display"><img src="./images/Home_images/update2.png" class="img-fluid"></span>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold mb-4" style="color: rgb(255, 115, 0);">Find local service providers in your diaspora</p>
+          <p class="text-secondary fs-5 mb-4">Support African service providers in your community. From lawn care, to plumbing, to financial planning - find the nearest provider in seconds. Cleaques is the only platform that caters to the daily needs of the diaspora population globally.</p>
+          <button class="btn fw-bold" style="background-color: rgb(255, 115, 0); color: white;"> Search providers</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div6 text-center pb-5" style="background-color: whitesmoke;">
+    <div class="container pt-5">
+      <p class="fs-2 fw-bold pt-5" style="color: rgb(255, 115, 0);">Engage with the local community of African expats</p>
+      <p class="fs-5 text-secondary">Connect with diaspora community in your area</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="eachimg">
+              <img src="./images/Home_images/engage1.png" class="img-fluid">
+              <p class="fs-5 py-3">Find meetups, festivals and events</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="eachimg">
+              <img src="./images/Home_images/engage2.png" class="img-fluid">
+              <p class="fs-5 py-3">Create and promote events</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="eachimg">
+              <img src="./images/Home_images/engage3.png" class="img-fluid">
+              <p class="fs-5 py-3">Stay in touch with your diaspora</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div7 py-5" style="background-color: whitesmoke;">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <p class="fw-bold fs-2" style="color: #00192b;">Manage everything in a simple,<br><span class="fw-bolder" style="color: orangered;">Intuitive App</span></p>
+          <p class="text-secondary fs-5">Cleaques app is designed to meet the daily needs of the diaspora - from shopping, to streaming, to connecting with friends, to bill pay and sending money. Just download, create a free account and get connected to products, services, events and people</p>
+          <button class="btn py-2 px-4 my-5" style="background-color: #00192b; color: white;"><a href=" https://g.co/kgs/15hwZh">Download</a></button>
+        </div>
+        <div class="col-12 col-md-5">
+          <img src="./images/Home_images/updated_Phones.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div8 mt-5 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold" style="color: #00192b;">Get your favorite products <br>anytime and <span class="fw-bolder" style="color: orangered;">earn rewards</span></p>
+          <p class="text-secondary fw-bold">Now you don't have to wait until your next trip back home to buy your favorite things! Shop anytime and get your items at your doorstep. Invite your friends and family so they too can enjoy authentic African products - straight from the source.</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold" style="color: #00192b;">Buy directly from African<br><span class="fw-bolder" style="color: orangered;">producers and creators</span></p>
+          <p class="fs-2" style="color: #00192b;">Welcome to connected commerce!</p>
+          <ul class="text-secondary fw-bold">
+            <li>Buy directly from people who poured their hearts into creating your product.</li>
+            <li>Follow, like and share sellers</li>
+            <li> Connect with sellers directly through built-in messaging.</li>
+            <li>Leave feedback to sellers and make special requests made to order items.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div9 text-center pt-4" style="background-color: orangered;">
+    <div class="container">
+      <p class="fs-2 fw-bold text-center my-5" style="color: white;">Explore products</p>
+    </div>
+    <div class="container">
+      <div  class="row">
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><img src="./icon images/Fashion.png"><div>Fashion</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><img src="./icon images/Restaurants.png"><div>Restaurants</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><img src="./icon images/Event.png"><div>Event</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><img src="./icon images/Live Event.png"><div>Live Event</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><img src="./icon images/Massage.png"><div>Massage</div></button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <button class="botn botn2 mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-hand-thumbs-up fs-2"></i><div>Barbers</div></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div10 my-5">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold mb-4 pt-4" style="color: #00192b;">Discover and support talented
+            <span class="fw-bolder" style="color: rgb(255, 115, 0);">artisans and creators</span></p>
+          <p class="text-secondary fs-5 mb-4 fw-bold">Browse emerging creators and discover music, courses, books and other digital products.<br><br> Offer your support early on to help them grow their global footprint.</p>
+        </div>
+        <div class="col-12 col-md-6 contain">
+          <div class="img-display"><img src="./images/Home_images/update3.png" class="img-fluid"></div>
+          <p class="fs-2 fw-bolder text-light overlay">Stream your favorite events <br><span class="text-secondary-emphasis fw-medium fs-5">Your hub for all things sports, music, comedy <br>and more!</span></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div11 my-5">
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <span class="img-display"><img src="./images/Home_images/update4.png" class="img-fluid"></span>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold mb-4" style="color: rgb(255, 115, 0);">Get rewarded <span style="color: #00192b;">every time you use the app</span></p>
+          <p class="text-secondary fs-5 mb-4">Get rewards points every time you shop! Earn even more points by liking and sharing products, services and events, and referring friends. Spend your points, send them to friends, or convert them to cash and deposit into your bank. You can even buy extra points to keep in your account or share with friends and family.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div12 py-5" style="background-color: whitesmoke;">
+    <p class="text-center fs-2 fw-bold mb-5" style="color: orangered;">Shop worry-free</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="./icon images/Vetted Sellers.png" class="mb-3">
+          <p class="text-primary fs-5 fw-bold">Vetted sellers</p>
+          <p class="text-secondary fs-5">Our merchants are vetted by our local teams in Africa and North America. Our strict merchant review process ensures that you are working with legitimate, trustworthy businesses.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="./icon images/GuaranteedDelivery.png" class="mb-3">
+          <p class="text-primary fs-5 fw-bold">Guaranteed delivery</p>
+          <p class="text-secondary fs-5">Our reliable fulfillment network ensures that your items ship out on time and get delivered as expected. If you don't receive your item, you don't have to pay.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="./icon images/EscrowDelivery services.png" class="mb-3">
+          <p class="text-primary fs-5 fw-bold">Escrow payment services</p>
+          <p class="text-secondary fs-5">When you buy with Cleaques, we deposit your payment into our escrow account. Once your product or service is delivered, we release the payment to the seller.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="./icon images/Privacyandsecurity.png" class="mb-3">
+          <p class="text-primary fs-5 fw-bold">Privacy and security</p>
+          <p class="text-secondary fs-5">Sellers will never see your personal financial information and every transaction is secured with the latest encryption.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div13 mt-5 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bolder" style="color: orangered;">Pay Bills <span class="fw-bold" style="color: #00192b;">for friends and family back home</span></p>
+          <p class="text-secondary">Send money directly to utility companies, doctors and other service providers to cover your family's bills. Pay electricity, gas, cable, internet and more quickly and conveniently.</p>
+          <p class="fs-2" style="color: orangered;">It's easy!</p>
+          <p class="text-secondary">Enter family member's information Enter provider information and account number Transfer money directly to the service provider</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bolder" style="color: orangered;">Donate to charitable organizations <span class="fw-bold" style="color: #00192b;">locally and back home</span></p>
+          <ul class="text-secondary">
+            <li>Give money to causes you care about with a click!</li>
+            <li>Schools and education, Churches,Shelters</li>
+            <li>Youth and kids services</li>
+            <li>Arts and culture</li>
+            <li>Medical aid</li>
+            <li>Entrepreneurial development</li>
+            <li>Training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div14 text-center text-light my-5 py-5" style="background-color: orangered;">
+    <p class="fs-1 mt-5">Empower women-owned businesses and <br>young <span class="fw-bold">entrepreneurs</span></p>
+    <p class="fs-5">It is significantly more difficult for women and youth to promote their small business globally. At Cleaques, we connect untapped and excluded artisans and creatives from Africa and across the globe, to Africans living in the US and Canada. By shopping with Cleaques, you contribute directly to the growth of small business in your community.</p>
+  </div>
+  <div class="div15 my-5">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 fw-bold mb-4 pt-4" style="color: #00192b;">Create a better quality of life for <br> all with fair <span class="fw-bolder" style="color: rgb(255, 115, 0);">trade goods</span></p>
+          <p class="text-secondary fs-5 mb-4 fw-medium">Feel good knowing you're paying artisans and producers fairly for their hard work. Cleaques helps disadvantaged small businesses across Africa to sell their products globally and support their families in a respectable way.</p>
+        </div>
+        <div class="col-12 col-md-6 contain">
+          <div class="img-display"><img src="./images/Home_images/update5.png" class="img-fluid"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div16  py-5" style="background-color:rgb(0, 153, 255);">
+    <div class="container text-center">
+      <p class="fs-2 fw-bolder py-5" style="color: #00192b;">Cleaques connects diaspora with their communities locally and back home. From global products marketplace, to local services, to international payments, we're here to support your lifestyle.</p>
+    </div>
+  </div>
+  <div class="div17 py-5" >
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <p class="fw-bold fs-2" style="color: #00192b;">Start your business with<br><span class="fw-bolder" style="color: orangered;">Cleaques</span></p>
+          <p class="text-secondary fs-5 fw-bold">Are you a creative, an artisan or a service provider looking to launch your business? Sell your products and services directly to interested buyers on a global marketplace. At Cleaques, we bring African businesses online and connect them with diaspora communities.<br><br>Start, manage and scale your business with confidence on Cleaques.</p>
+          <button class="btn py-2 px-4 my-5 fw-bold fs-4" data-toggle="modal" data-target="#exampleModal" style="background-color: #00192b; color: white;">Sign up now</button>
+        </div>
+        <div class="col-12 col-md-5">
+          <img src="./images/Home_images/updated_Phones.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-secondary">
+          <img src="./icon images/claequeslogo.png" alt=""><br><br>
+          <a href="index.html" class="text-secondary fw-bold">Home</a><br>
+          <a href="sell.html" class="text-secondary fw-bold">Sell</a><br>
+          <a href="about.html" class="text-secondary fw-bold">About</a><br>
+          <a href="contact.html" class="text-secondary fw-bold">Contact</a><br>
+          <a href="" class="text-secondary fw-bold">Sign up</a><br>
+          <a href="" class="text-secondary fw-bold">Login</a><br>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="fs-3 fw-medium">Discover</p>
+          <a href="" class="text-secondary fw-bold">Shop</a><br>
+          <a href="" class="text-secondary fw-bold">products</a><br>
+          <a href="" class="text-secondary fw-bold">Find services</a><br>
+          <a href="" class="text-secondary fw-bold">Find events</a><br><br>
+          <p class="fs-3 fw-medium">Become A Seller</p>
+          <a href="" class="text-secondary fw-bold">Features and</a><br>
+          <a href="" class="text-secondary fw-bold">Pricing</a><br>
+          <a href="" class="text-secondary fw-bold">Set up an account</a><br>
+          <a href="" class="text-secondary fw-bold">Learn</a><br>
+          <a href="" class="text-secondary fw-bold">FAQ</a><br>
+          <a href="" class="text-secondary fw-bold">Seller Login</a><br>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="fs-3 fw-medium">Join The Community!</p>
+          <div class="emailbox">
+            <input type="email" placeholder="Email...">
+            <button>Submit</button>
+          </div><br>
+          <p class="fs-3">Reach Out</p>
+          <a href="mailto:morontowumienioluwa@gmail.com" class="text-secondary fs-5">contact@cleaques.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="./js/file.js"></script>
+</body>
+</html>

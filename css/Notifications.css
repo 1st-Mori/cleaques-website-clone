@@ -1,0 +1,127 @@
+.dropstart:hover>.dropdown-menu{
+    display:block;
+}
+.dropstart .dropdown-menu{
+    right: 157px;
+    margin-top: 10px;
+}
+.dropstart2 .dropdown-menu{
+    right: 190px;
+    margin-top: 10px;
+}
+.dropstart3 .dropdown-menu{
+    right: 178px;
+    margin-top: 10px;
+}
+.dropdown .dropdown-menu, .dropstart .dropdown-menu{
+    padding: 10px 0px;
+    width: 260px;
+}
+ul>li{
+    cursor: pointer;
+}
+.dropdown-menu li:hover{
+    background-color: rgba(0, 0, 255, 0.062);
+}
+.drop-icon{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.dropstart-icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+.dropstart .dropdown-menu a{
+    text-decoration: none;
+    color: black;
+}
+.nav-link{
+  font-size: 16px;
+  color: grey;
+}
+.nav-item{
+  margin-left: 1rem;
+}
+.nav-link i{
+    margin-right: 0.5em;
+}
+.nav-item a:hover{
+    color:mediumspringgreen;
+}
+.none a:hover{
+    color: black;
+}
+.navbar{
+    box-shadow: 3px 0px 5px 4px gray;
+}
+.flex, .acctchange{
+    display: flex;
+    flex-direction: row;
+}
+.acctchange span:first-child{
+    line-height: 0px
+}
+.div1{
+    height: 700px;
+    background-color: whitesmoke;
+    padding: 0px 100px 0px;
+}
+.heading-line {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.heading-line:after {
+    content: "";
+    height: 4px;
+    width: 75px;
+    background-color: #29B6F6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.notify img{
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+.time{
+    color: gray;
+    font-size: 12px;
+}
+.notify{
+    display: flex;
+    background-color: white;
+    padding: 15px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    border-left: solid 3px orangered;
+    width: 98%;
+    transition: .3s;
+}
+.notify:hover{
+    transform: scale(1.012);
+    border-left: solid 10px orangered;
+}
+.notify_body{
+    height: 95%;
+    overflow-y: auto;
+    z-index: -99;
+}
+.footer{
+    z-index: 99;
+}
+.footer a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.footer a:hover{
+    color: grey;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic</title>
+    <g id="Vendor-Mobile-Version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="New-Donation" transform="translate(-22.000000, -972.000000)" fill="#1D1E2C">
+            <g id="Group-7" transform="translate(0.000000, 334.000000)">
+                <g id="Group-17" transform="translate(16.000000, 602.000000)">
+                    <g id="Group-14" transform="translate(0.000000, 30.000000)">
+                        <g id="ic_facebook" transform="translate(0.000000, 5.000000)">
+                            <path d="M11,6.5 L13.5,6.5 L13.1875,9 L11,9 L11,16.5 L7.7578125,16.5 L7.7578125,9 L6,9 L6,6.5 L7.7578125,6.5 L7.7578125,4.8203125 C7.7578125,3.72655703 8.03124727,2.89974238 8.578125,2.33984375 C9.12500273,1.77994512 10.036452,1.5 11.3125,1.5 L13.5,1.5 L13.5,4 L12.171875,4 C11.6770809,4 11.3580736,4.07812422 11.2148438,4.234375 C11.0716139,4.39062578 11,4.65103984 11,5.015625 L11,6.5 Z" id="ic"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

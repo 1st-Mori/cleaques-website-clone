@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+nav{
+    position: fixed;
+}
+.nav-item a{
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 500;
+}
+.nav-item a:hover{
+    color: orangered;
+}
+.nav-item a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: orangered;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: left;
+}
+.nav-item a:hover::after{
+    transform:scaleX(1);
+    color: orangered;
+}
+.togglebutton{
+    display: flex;
+    justify-content: center;
+}
+.togglebutton button{
+    padding: 10px 40px;
+    font-size: 12px;
+    box-shadow: 2px 2px 10px 2px rgb(223, 219, 219);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.togglebutton button:active{
+    color: white;
+    background-color: #3B71CA;
+}
+.togglebutton button:focus{
+    color: white;
+    background-color: #3B71CA;
+}
+#vendor{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#personal{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#personal-display{
+    display: none;
+}
+.sign-up{
+    margin-left: 280px;
+}
+.bi{
+    font-size: 5em;
+    margin-right: 12px;
+}
+.close{
+    outline: none;
+    border: none;
+    padding: 3px 8px;
+}
+header{
+    background-image: url("about_slider.png");
+    background-position: center;
+    background-size: cover;
+}
+.div1{
+    padding: 10% 5% 0%;
+}
+.overlay{
+    background: rgba(255, 255, 255, 0.74);
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12%;
+}
+.img-display img{
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transition: .3s;
+}
+.img-display img:hover, .eachimg:hover{
+    transform: scale(1.06);
+}
+.eachimg img, .eachimg{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: .3s;
+}
+.eachimg img{
+    height: 300px;
+    background-color: white;
+    width: 100%;
+}
+.eachimg{
+    background-color: white;
+}
+.fill{
+    background-image: url("about-left1.png");
+}
+.div8 a{
+    color: #00192b;
+}
+.div8 a:hover{
+    color:#3B71CA;
+}
+.footer a{
+    text-decoration: none;
+}
+.emailbox input{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    box-shadow: inset 1px 1px 3px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.emailbox button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+
+@media (min-width: 200px) and (max-width:500px){
+    .div1 .div p:first-child{
+        font-size: 28px;
+    }
+    .div1 .div p:nth-child(2){
+        font-size: 16px;
+    }
+    .div1{
+        height: 430px;
+        padding-top: 90px;
+        padding-bottom: 400px;
+    }
+    .div1 .div span{
+        font-size: 18px;
+    }
+    .sign-up{
+        margin-left: 0px;
+    }
+    .log-in{
+        margin-top: 20px;
+    }
+    .nav-item a{
+        margin-left: 0px;
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .nav-item a::after{
+        background: transparent;
+    }
+    .nav-item a:hover::after{
+        color: transparent;
+    }
+}
+@media (min-width: 500px) and (max-width:699px){
+    .div1 .div p:first-child{
+        font-size: 28px;
+    }
+    .div1 .div p:nth-child(2){
+        font-size: 16px;
+    }
+    nav{
+        width: 100%;
+    }
+    .div1{
+        height: 430px;
+        padding-top: 100px;
+        padding-bottom: 24rem;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .sign-up{
+        margin-left: 0px;
+    }
+    .log-in{
+        margin-top: 20px;
+    }
+    .nav-item a{
+        margin-left: 0px;
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .nav-item a::after{
+        background: transparent;
+    }
+    .nav-item a:hover::after{
+        color: transparent;
+    }
+}
+@media (min-width:700px) and (max-width:990px){
+    .div1 .div p:first-child{
+        font-size: 28px;
+    }
+    .div1 .div p:nth-child(2){
+        font-size: 16px;
+    }
+    .div1{
+        height: 430px;
+        padding-top: 90px;
+        padding-bottom: 400px;
+    }
+    .sign-up{
+        margin-left: 0px;
+    }
+    .log-in{
+        margin-top: 20px;
+    }
+    .nav-item a{
+        margin-left: 0px;
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .nav-item a::after{
+        background: transparent;
+    }
+    .nav-item a:hover::after{
+        color: transparent;
+    }
+}
+@media (min-width:991px) and (max-width:1200px){
+    .div1 .div p:first-child{
+        font-size: 28px;
+    }
+    .div1 .div p:nth-child(2){
+        font-size: 16px;
+    }
+    .div1{
+        height: 430px;
+        padding-top: 90px;
+        padding-bottom: 400px;
+    }
+    .sign-up{
+        margin-left: 190px;
+    }
+    .log-in{
+        margin-top: 20px;
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .nav-item a::after{
+        background: transparent;
+    }
+    .nav-item a:hover::after{
+        color: transparent;
+    }
+}
+@media (min-width:991px) and (max-width:1200px){
+    .div1 .div p:first-child{
+        font-size: 28px;
+    }
+    .div1 .div p:nth-child(2){
+        font-size: 16px;
+    }
+    .div1{
+        height: 430px;
+        padding-top: 90px;
+        padding-bottom: 400px;
+    }
+    .sign-up{
+        margin-left: 150px;
+    }
+    .log-in{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .nav-item a::after{
+        background: transparent;
+    }
+    .nav-item a:hover::after{
+        color: transparent;
+    }
+}

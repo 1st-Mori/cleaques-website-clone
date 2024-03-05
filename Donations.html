@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donations</title>
+  <link rel="stylesheet" href="./css/donations.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: white;">
+    <div class="container">
+      <a class="navbar-brand" href="Dashboard.html"><img src="./images/Dashboard/cleaqueslogo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  ms-auto mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-plus-circle"></i>Post
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Create Post</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Dashboard.html"><i class="bi bi-house-door"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Social.html"><i class="bi bi-people"></i>Social</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chat.html"><i class="bi bi-chat-dots"></i>Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Notifications.html"><i class="bi bi-bell"></i>Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i>Cart</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown none btn-group">
+        <button type="button" class="btn btn-light " data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: transparent;">
+          <div class="flex" id="let-down">
+            <i class="bi bi-person-circle fs-1 pt-3"></i>
+            <p class="text-secondary pt-4">Personal <br><span>Mori</span></p>
+          </div>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="Timeline.html"><i class="bi bi-calendar2-week drop-icon"></i>My timeline</a></li>
+          <li>
+            <div class="btn-group dropstart">
+              <button type="button" class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: transparent;"><i class="bi bi-person-circle drop-icon"></i>Switch to user</button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="acctchange">
+                    <i class="bi bi-person-circle icon"></i>
+                    <div class="fw-bolder">Mori <br><span class="text-success fw-bold">personal</span></div>
+                    <span><i class="bi bi-check-circle-fill text-success ms-4"></i>Active</span>
+                  </a>
+                </li>
+                <li>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <div class="acctchange">
+                      <i class="bi bi-person-check icon"></i>
+                      <div class="fw-bolder">Create <br><span class="fw-bold">profile</span></div>
+                      <span><i class="bi bi-person-circle ms-4"></i>switch</span>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="btn-group dropstart dropstart2">
+              <button type="button" class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: transparent;"><i class="bi bi-person-fill-gear drop-icon"></i>User Management</button>
+              <ul class="dropdown-menu">
+                <a href="Order.html"><li><i class="bi bi-box-seam dropstart-icon"></i>Orders</li></a>
+                <a href="Rewards.html"><li><i class="bi bi-gift dropstart-icon"></i>Rewards</li></a>
+                <a href="Donations.html"><li><i class="bi bi-bag-heart dropstart-icon"></i>Donations</li></a>
+              </ul>
+            </div>
+          </li>
+          <li><a class="dropdown-item" href="SavedItems.html"><i class="bi bi-bookmark drop-icon"></i>Saved items</a></li>
+          <li>
+            <div class="btn-group dropstart dropstart3">
+              <button type="button" class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: transparent;"><i class="bi bi-gear drop-icon"></i>Account Settings</button>
+              <ul class="dropdown-menu">
+                <a href="editprofile.html"><li><i class="bi bi-person dropstart-icon"></i>Edit Profile</li></a>
+                <a href="blocked.html"><li><i class="bi bi-person-slash dropstart-icon"></i>Blocked contacts</li></a>
+              </ul>
+            </div>
+          </li>
+          <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right drop-icon"></i>Log out</a></li>
+        </ul>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title fs-3" id="exampleModalLabel">Create Vendor profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+              </div>
+              <div class="modal-body">
+                <!--Vendor Div-->
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                  <label for="floatingInput">Company name*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                  <label for="floatingInput">Email address*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                  <label for="floatingPassword">Phone*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                  <label for="floatingInput">Street Address*</label>
+                </div>
+                <form class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label text-secondary">Country</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>--Country--</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label text-secondary">State</label>
+                    <select id="inputState" class="form-select">
+                      <option selected></option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label text-secondary">City</label>
+                    <select id="inputState" class="form-select">
+                      <option selected></option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputZip" class="form-label text-secondary">Zip code</label>
+                    <input type="text" class="form-control text-secondary" id="inputZip">
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                    <label for="floatingInput">Registration Number*</label>
+                  </div>
+                  <div class="upload col-12">
+                    <label for="formFileLg" class="form-label text-secondary">Upload business registration certificate</label>
+                    <input class="form-control text-secondary form-control text-secondary-lg" id="formFileSm" type="file">
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                    <label for="floatingInput">Referral code</label>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn px-5" style="background-color: orangered; color: white;">Create Account</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </nav>
+  <div class="div1">
+    <div class="container">
+      <p class="fs-3 fw-bolder">Donations</p>
+      <div class="container">
+        <nav>
+          <div class="nav nav-underline" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="Newest-tab" data-bs-toggle="tab" data-bs-target="#Newest" type="button" role="tab" aria-controls="Newest" aria-selected="true">Newest</button>
+            <button class="nav-link" id="MyDonations-tab" data-bs-toggle="tab" data-bs-target="#MyDonations" type="button" role="tab" aria-controls="MyDonations" aria-selected="false">My Donations</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="Newest" role="tabpanel" aria-labelledby="Newest-tab" tabindex="0">
+              <div class="heading mb-4">
+                  <div class="fs-4 ">Categories</div>
+                  <div class="wrap">
+                      <div class="search">
+                         <input type="text" class="searchTerm" placeholder="Search Donations....">
+                         <button type="submit" class="searchButton">
+                          <i class="bi bi-search"></i>
+                         </button>
+                      </div>
+                  </div>
+              </div>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="Disaster-tab" data-bs-toggle="pill" data-bs-target="#Disaster" type="button" role="tab" aria-controls="Disaster" aria-selected="true">Disaster</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Church-tab" data-bs-toggle="pill" data-bs-target="#Church" type="button" role="tab" aria-controls="Church" aria-selected="false">Church</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Missionary-tab" data-bs-toggle="pill" data-bs-target="#Missionary" type="button" role="tab" aria-controls="Missionary" aria-selected="false">Missionary</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Help-tab" data-bs-toggle="pill" data-bs-target="#Help" type="button" role="tab" aria-controls="Help" aria-selected="false">Help</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="Children-tab" data-bs-toggle="pill" data-bs-target="#Children" type="button" role="tab" aria-controls="Children" aria-selected="false">Children</button>
+                  </li>
+              </ul>
+              <div class="tab-content content2" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="Disaster" role="tabpanel" aria-labelledby="Disaster" tabindex="0">
+                      <div class="container pt-5 mb-5">
+                        <div class="row">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster1.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster2.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster3.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster4.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster4.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/disaster5.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="Church" role="tabpanel" aria-labelledby="Church-tab" tabindex="0">
+                      <div class="container pt-5 mb-5">
+                        <div class="row">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/church1.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/church2.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/church3.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="Missionary" role="tabpanel" aria-labelledby="Missionary-tab" tabindex="0">
+                      <div class="container pt-5 mb-5">
+                        <div class="row">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/mission1.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/mission2.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/mission3.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/mission4.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/mission5.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="Help" role="tabpanel" aria-labelledby="Help-tab" tabindex="0">
+                      <div class="container pt-5 mb-5">
+                        <div class="row">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Dashboard/medical.JPG">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Dashboard/Education.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Dashboard/language.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/help1.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/help2.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/help3.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="Children" role="tabpanel" aria-labelledby="Children-tab" tabindex="0">
+                      <div class="container pt-5 mb-5">
+                        <div class="row">
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/children.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/children2.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/children3.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/children4.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A reputable organization that focuses on improving healthcare access and awareness within diaspora populations through medical clinics and health campaigns.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Donations_images/children5.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">lorem ipsum dolor</p>
+                                <p>A non-profit organization dedicated to providing educational resources, scholarships, and mentorship programs for young members of diasporan communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="donation">
+                              <img src="./images/Dashboard/language.jpg">
+                              <div class="text">
+                                <p class="fs-5 pt-3">amet consectetur adipisicing elit</p>
+                                <p>A language revitalization initiative that offers language classes, materials, and cultural exchange events to ensure the survival of native languages within diaspora communities.</p>
+                                <button class="btn text-light fw-bold" style="background-color: orangered;">Donate</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="MyDonations" role="tabpanel" aria-labelledby="MyDonations-tab" tabindex="0">You have not made any donations yet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <div class="footer py-5 ">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <p class="fs-5 fw-bold">Company</p>
+              <a href="">About us</a><br>
+              <a href="">Contact us</a><br>
+              <a href="">Careers</a><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <p class="fs-5 fw-bold">Product</p>
+              <a href="">Features</a><br>
+              <a href="">Pricing</a><br>
+              <a href="">Support</a><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <p class="fs-5 fw-bold">Legal</p>
+              <a href="">Privacy Policy</a><br>
+              <a href="">Terms & Conditions</a><br>
+              <a href="">Return Policy</a><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <p class="fs-5 fw-bold">Contact us</p>
+              <a href="mailto:contact@cleaques.com">contact@cleaques.com</a><br>
+              <a href="tel:++(274) 931-7982">+(274) 931-7982</a><br>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./js/file.js"></script>   
+</body>
+</html>

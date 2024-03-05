@@ -1,0 +1,101 @@
+.dropstart:hover>.dropdown-menu{
+    display:block;
+}
+.dropstart .dropdown-menu{
+    right: 157px;
+    margin-top: 10px;
+}
+.dropstart2 .dropdown-menu{
+    right: 190px;
+    margin-top: 10px;
+}
+.dropstart3 .dropdown-menu{
+    right: 178px;
+    margin-top: 10px;
+}
+.dropdown .dropdown-menu, .dropstart .dropdown-menu{
+    padding: 10px 0px;
+    width: 260px;
+}
+ul>li{
+    cursor: pointer;
+}
+.dropdown-menu li:hover{
+    background-color: rgba(0, 0, 255, 0.062);
+}
+.drop-icon{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.dropstart-icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+.dropstart .dropdown-menu a{
+    text-decoration: none;
+    color: black;
+}
+.nav-link{
+  font-size: large;
+  font-weight: 500;
+  color: grey;
+}
+.nav-item{
+  margin-left: 1rem;
+}
+.nav-link i{
+    margin-right: 0.5em;
+}
+.nav-item a:hover{
+    color:mediumspringgreen;
+}
+.none a:hover{
+    color: black;
+}
+.navbar{
+    box-shadow: 3px 0px 5px 4px gray;
+}
+.flex, .acctchange{
+    display: flex;
+    flex-direction: row;
+}
+.acctchange span:first-child{
+    line-height: 0px
+}
+.heading{
+    background-color: rgba(255, 68, 0, 0.267);
+}
+th,td{
+    padding: 20px;
+}
+.div2{
+    height: 350px;
+    overflow: auto;
+}
+.footer a{
+    text-decoration: none;
+}
+.emailbox input{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    box-shadow: inset 1px 1px 3px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.emailbox button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+}

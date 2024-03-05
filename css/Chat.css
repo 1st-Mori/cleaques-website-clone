@@ -1,0 +1,235 @@
+.dropstart:hover>.dropdown-menu{
+    display:block;
+}
+.dropstart .dropdown-menu{
+    right: 157px;
+    margin-top: 10px;
+}
+.dropstart2 .dropdown-menu{
+    right: 190px;
+    margin-top: 10px;
+}
+.dropstart3 .dropdown-menu{
+    right: 178px;
+    margin-top: 10px;
+}
+.dropdown .dropdown-menu, .dropstart .dropdown-menu{
+    padding: 10px 0px;
+    width: 260px;
+}
+ul>li{
+    cursor: pointer;
+}
+.dropdown-menu li:hover{
+    background-color: rgba(0, 0, 255, 0.062);
+}
+.drop-icon{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.dropstart-icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+.dropstart .dropdown-menu a{
+    text-decoration: none;
+    color: black;
+}
+.nav-link{
+  font-size: 16px;
+  color: grey;
+}
+.nav-item{
+  margin-left: 1rem;
+}
+.nav-link i{
+    margin-right: 0.5em;
+}
+.nav-item a:hover{
+    color:mediumspringgreen;
+}
+.none a:hover{
+    color: black;
+}
+.navbar{
+    box-shadow: 3px 0px 5px 4px gray;
+}
+.flex, .acctchange{
+    display: flex;
+    flex-direction: row;
+}
+.acctchange span:first-child{
+    line-height: 0px
+}
+.div1{
+    background-color: whitesmoke;
+}
+.chats, .Messages{
+    border: solid thin gainsboro;
+    height: 600px;
+    margin-top: 30px;
+    position: relative;
+}
+.head{
+    background-color: whitesmoke;
+}
+.msg_body, .chat_body{
+    height: 75%;
+    overflow-y:auto;
+}
+.people{
+    display: flex;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: .4s;
+}
+.people:hover{
+    background-color: rgba(0, 0, 0, 0.068);
+}
+.active, .active:hover{
+    background-color: rgba(0, 0, 0, 0.164);
+}
+.people img, .chats img{
+    height: 60px;
+    width: 60px;
+}
+.people span{
+    color: gray;
+    font-size: 12px;
+}
+.people p{
+    margin-left: 20px;
+}
+.chats .head{
+    display: flex;
+}
+.chats .head{
+    border-bottom: solid 1.5px  gray;
+}
+.chats .head span{
+    font-size: 12px;
+}
+#action_menu_btn {
+	position: absolute;
+	right: 10px;
+	top: 23px;
+	color: rgb(51, 46, 46);
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.action_menu {
+	z-index: 1;
+	position: absolute;
+	padding: 15px 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 15px;
+	top: 55px;
+	right: 15px;
+	display: none;
+}
+
+.action_menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.action_menu ul li {
+	width: 100%;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+}
+
+.action_menu ul li i {
+	padding-right: 10px;
+}
+
+.action_menu ul li:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.call{
+    margin-left: 380px;
+    margin-top: 10px;
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+.call i{
+    cursor: pointer;
+}
+.sender,.receiver{
+    display: flex;
+}
+.sender img, .receiver img{
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.msgbox{
+    background-color: orangered;
+    border-radius: 30px;
+    color: white;
+    padding: 10px;
+}
+.time{
+    color: grey;
+    font-size: 11px;
+    margin-top: 5px;
+}
+.receiver img{
+    margin-left: 20px;
+}
+.input_group input{
+    width: 90%;
+    position: relative;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.input_group button{
+    position: absolute;
+    outline: none;
+    border: none;
+    padding: 20px 20px 18px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: orangered;
+    color: white;
+    font-size: 20px;
+}
+.input_group i{
+    cursor: pointer;
+}
+
+
+.footer a{
+    text-decoration: none;
+}
+.emailbox input{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    box-shadow: inset 1px 1px 3px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.emailbox button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+}

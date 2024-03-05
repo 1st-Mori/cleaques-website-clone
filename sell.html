@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell</title>
+    <link rel="stylesheet" href="./css/Sell.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg py-4 px-5" style="background-color: #00192b;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="sell.html">Sell</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary sign-up px-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Sign Up
+            </button>
+            
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title fs-3" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                      <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Enter your Email and new Password for sign up, or <span data-toggle="modal" data-target="#staticBackdrop" data-dismiss="modal">Already have account?</span></p>
+                    <div class="togglebutton mb-4 act ">
+                      <button  onclick="vendorShow()"><span class="icons act" id="vendor"><i class="bi bi-person-fill-check"></i><br>VENDOR</span></button>
+                      <button onclick="personalShow()"><span class="icons" id="personal" ><i class="bi bi-person-fill"></i><br>PERSONAL</span></button>
+                    </div>
+                    <!--Vendor Div-->
+                    <div id="vendor-display">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Company name*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Email address*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Confirm Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Paypal Account*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Street Address*</label>
+                      </div>
+                      <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">Country</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>--Country--</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">State</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">City</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputZip" class="form-label text-secondary">Zip</label>
+                          <input type="text" class="form-control text-secondary" id="inputZip">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Registration Number*</label>
+                        </div>
+                        <div class="upload col-12">
+                          <label for="formFileLg" class="form-label text-secondary">Upload business registration certificate</label>
+                          <input class="form-control text-secondary form-control text-secondary-lg" id="formFileSm" type="file">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Referral code</label>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn px-5" style="background-color: orangered; color: white;">Sign up</button>
+                        </div>
+                      </form>
+                      <p>By clicking "Sign Up", you agree to Cleaques <span class="text-primary">Terms and Condition</span> of Use and <span class="text-primary">Privacy Policy</span>. You consent to receive phone calls and SMS messages from Cleaques to provide updates on your order and/or for marketing purposes. You will receive up to 5 promotional messages a month. Reply with "STOP" to cancel at any time. Message and data rates may apply.</p>
+                    </div>
+      
+                    <!--Personal Div-->
+                    <div id="personal-display">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Name*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                        <label for="floatingInput">Email address*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Password*</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                        <label for="floatingPassword">Confirm Password*</label>
+                      </div>
+                      <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">Country</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>--Country--</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">State</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputState" class="form-label text-secondary">City</label>
+                          <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputZip" class="form-label text-secondary">Zip</label>
+                          <input type="text" class="form-control text-secondary" id="inputZip">
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="date" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Age(must be 18+)*</label>
+                        </div>
+                        <label class="text-secondary">Gender</label>
+                        <div class="form-check col-6">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Male
+                          </label>
+                        </div>
+                        <div class="form-check col-6">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Female
+                          </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control text-secondary" id="floatingInput" required>
+                          <label for="floatingInput">Referral code</label>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn px-5" style="background-color: orangered; color: white;">Sign up</button>
+                        </div>
+                      </form>
+                      <p>By clicking "Sign Up", you agree to Cleaques <span class="text-primary">Terms and Condition</span> of Use and <span class="text-primary">Privacy Policy</span>. You consent to receive phone calls and SMS messages from Cleaques to provide updates on your order and/or for marketing purposes. You will receive up to 5 promotional messages a month. Reply with "STOP" to cancel at any time. Message and data rates may apply.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </li>
+          <li>
+            <!-- Button trigger modal -->
+            <!--Log in button-->
+            <button type="button" class="btn text-light px-5 ms-4 log-in" style="background-color: orangered;" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+            <!-- Modal -->
+            <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Don’t have an account?<button data-toggle="modal" data-target="#exampleModal" data-dismiss="modal" class="btn text-primary" >Sign up now!</button></p>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control text-secondary" id="floatingInput" required>
+                      <label for="floatingInput">Email address*</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control text-secondary" id="floatingPassword" required>
+                      <label for="floatingPassword">Password*</label>
+                    </div>
+                    <a href="">forgot password?</a>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="Dashboard.html" class="btn btn-primary text-light">Login</a></button>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>  
+  </nav>
+  <div class="div1">
+    <div class="overlay">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12">
+            <p class="fw-bold mb-5" style="color: #00192b; line-height: 1em; font-size: 47px;">Connect with your diaspora on Cleaques marketplace</p>
+            <p class="fs-5 fw-bold ps-5" style="color: #00192b; line-height: 1em;">We give African expats access to quality and <br> trusted cultural goods, services and events <br>while offering opportunities to African creators <br>and producers to join the global market</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div2 text-center my-5">
+    <div class="container py-5">
+      <div  class="row">
+        <div class="col-12 col-md-3">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-shop-window fs-4"></i><div>Shop Product</div></button>
+        </div>
+        <div class="col-12 col-md-3">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-headset fs-4"></i><div>Physical Products</div></button>
+        </div>
+        <div class="col-12 col-md-3">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-credit-card-2-back fs-4"></i><div>Send money</div></button>
+        </div>
+        <div class="col-12 col-md-3">
+          <button class="botn mb-5" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-heart-pulse fs-4"></i><div>Digital services</div></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div3 py-5" style="background-color: whitesmoke;">
+    <div class="container column-gap-5">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <p class="fs-1 fw-bold">Get access to global markets</p>
+          <p class="fw-bold text-secondary fs-5">Have products, services or events to share with the world. Start selling globally with Cleaques. <br>Reach millions of buyers in the African diaspora with a digital storefront. Get all the tools to promote and manage your business</p>
+        </div>
+        <div class="col-12 col-md-4 mx-auto">
+          <img src="./images/Sell_images/cart.png" class="img-fluid sell-cart">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div4 text-center mb-5">
+    <div class="container">
+      <p class="fs-1 fw-bolder text-light">Pay us only after you get paid. We manage taxes, fees, privacy and security on your behalf</p>
+      <button class="batn fs-3 fw-bold" style="color: orangered;" data-toggle="modal" data-target="#exampleModal">Start for free today<i class="bi bi-arrow-right-short fs-4"></i></button>
+    </div>
+  </div>    
+  <div class="div5 py-5 my-5 text-center">
+    <div class="container">
+      <p class="fw-bold fs-1">Leverage a seamless all-in-one platform for global marketing, sales, and fulfillment</p>
+      <p class="fs-5 text-secondary mb-5">Manage your business from your smartphone with Cleaques intuitive app!</p>
+      <div class="row">
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-1.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Set up your storefront and promote it to our buyers</p>
+        </div>
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-2.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Collect payments from local customers and from buyers across the globe.</p>
+        </div>
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-3.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Streamline fulfillment with powerful logistics tools</p>
+        </div>
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-4.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Get reviews and manage your reputation</p>
+        </div>
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-5.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Track your financials with smart reporting.</p>
+        </div>
+        <div class="col-6 col-md-4 border">
+          <p><img src="./images/Sell_images/sellicon-6.png" height="120px" class="my-5"></p>
+          <p class="mb-5 fw-bold fs-5">Manage everything with a built-in dashboard.</p>
+        </div>
+      </div>
+    </div>
+    <a href=" https://g.co/kgs/15hwZh" class="btn text-light mt-5 fw-bold" style="background-color: orangered; text-decoration: none;">Download Now</a>
+  </div>
+  <div class="div6 my-5">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="fs-2 mb-4 fw-bold" style="color: #00192b;">Focus on creating - we'll grow your business</p>
+          <p class="text-secondary fs-5 mb-4 fw-bold">Get a true one-stop-shop experience with Cleaques. Just set up your online store and sell - we'll take care of everything else. We promote your business to interested buyers in your neighborhood and to the global diaspora, take care of transaction fees and handle global fulfillment. Just pay an affordable monthly subscription fee or low transaction fee on each sale.</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <span class="img-display"><img src="./images/Sell_images/sell4.png" class="img-fluid"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-secondary">
+          <img src="./icon images/claequeslogo.png" alt=""><br><br>
+          <a href="index.html" class="text-secondary fw-bold">Home</a><br>
+          <a href="sell.html" class="text-secondary fw-bold">Sell</a><br>
+          <a href="about.html" class="text-secondary fw-bold">About</a><br>
+          <a href="contact.html" class="text-secondary fw-bold">Contact</a><br>
+          <a href="" class="text-secondary fw-bold">Sign up</a><br>
+          <a href="" class="text-secondary fw-bold">Login</a><br>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="fs-3 fw-medium">Discover</p>
+          <a href="" class="text-secondary fw-bold">Shop</a><br>
+          <a href="" class="text-secondary fw-bold">products</a><br>
+          <a href="" class="text-secondary fw-bold">Find services</a><br>
+          <a href="" class="text-secondary fw-bold">Find events</a><br><br>
+          <p class="fs-3 fw-medium">Become A Seller</p>
+          <a href="" class="text-secondary fw-bold">Features and</a><br>
+          <a href="" class="text-secondary fw-bold">Pricing</a><br>
+          <a href="" class="text-secondary fw-bold">Set up an account</a><br>
+          <a href="" class="text-secondary fw-bold">Learn</a><br>
+          <a href="" class="text-secondary fw-bold">FAQ</a><br>
+          <a href="" class="text-secondary fw-bold">Seller Login</a><br>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="fs-3 fw-medium">Join The Community!</p>
+          <div class="emailbox">
+            <input type="email" placeholder="Email...">
+            <button>Submit</button>
+          </div><br>
+          <p class="fs-3">Reach Out</p>
+          <a href="mailto:morontowumienioluwa@gmail.com" class="text-secondary fs-5">contact@cleaques.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="./js/file.js"></script>
+</body>
+</html>

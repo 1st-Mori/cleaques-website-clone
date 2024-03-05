@@ -1,0 +1,136 @@
+.dropstart:hover>.dropdown-menu{
+    display:block;
+}
+.dropstart .dropdown-menu{
+    right: 157px;
+    margin-top: 10px;
+}
+.dropstart2 .dropdown-menu{
+    right: 190px;
+    margin-top: 10px;
+}
+.dropstart3 .dropdown-menu{
+    right: 178px;
+    margin-top: 10px;
+}
+.dropdown .dropdown-menu, .dropstart .dropdown-menu{
+    padding: 10px 0px;
+    width: 260px;
+}
+ul>li{
+    cursor: pointer;
+}
+.dropdown-menu li:hover{
+    background-color: rgba(0, 0, 255, 0.062);
+}
+.drop-icon{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.dropstart-icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.icon{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+.dropstart .dropdown-menu a{
+    text-decoration: none;
+    color: black;
+}
+.nav-link{
+  font-size: 16px;
+  color: grey;
+}
+.nav-item{
+  margin-left: 1rem;
+}
+.nav-link i{
+    margin-right: 0.5em;
+}
+.nav-item a:hover{
+    color:mediumspringgreen;
+}
+.none a:hover{
+    color: black;
+}
+.navbar{
+    box-shadow: 3px 0px 5px 4px gray;
+}
+.flex, .acctchange{
+    display: flex;
+    flex-direction: row;
+}
+.acctchange span:first-child{
+    line-height: 0px
+}
+.flex2{
+    display: flex;
+    justify-content: space-between;
+}
+.flex2 button{
+    border-radius: 200px;
+}
+.suggest div, .posts{
+    background-color: white;
+    border-radius: 8px;
+}
+.profile a, .heading{
+    display: flex;
+    margin-bottom: 20px;
+}
+.profile a{
+    text-decoration:none;
+    color: black;
+}
+.profile img, .heading img{
+    height: 60px;
+    width: 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.post_body{
+    height: 600px;
+    overflow-y: auto;
+}
+.profile div, .heading div{
+    line-height: 5px;
+}
+.posts .pic img{
+    height: 400px;
+    width: 100%;
+}
+.action, .action div, .comment{
+    display: flex;
+}
+.action div{
+    margin-left: 2.3em;
+}
+.action div i{
+    margin-right: 0.5em;
+    font-size: 18px;
+    cursor: pointer;
+}
+.comment input{
+    padding: 15px 0px 15px 30px;
+    width:420px;
+    background-color: whitesmoke;
+    outline: none;
+    border: solid thin rgb(148, 146, 146);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.comment button{
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    padding: 15px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
